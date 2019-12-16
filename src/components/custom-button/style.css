@@ -1,0 +1,20 @@
+.button {
+    height: 60px;
+    min-width: 210px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    background-color: #9F65A6;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+.button:first-of-type {
+    margin-bottom: 18px;
+}
+
+.button:hover,
+.button:active {
+    color: #9F65A6;
+    background-color: white;
+    border: 2px solid #9F65A6;
+}

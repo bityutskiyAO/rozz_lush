@@ -1,0 +1,36 @@
+.container {
+
+}
+
+.homeHeader {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px;
+    max-width: 600px;
+    margin-bottom: 140px;
+}
+
+.homeBody {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 140px;
+}
+.bodyHeader{
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.service {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    font-family: Montserrat, sans-serif;
+}
+
+.footer {
+    display: flex;
+    max-width: 210px;
+    flex-direction: column;
+}

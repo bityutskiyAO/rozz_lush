@@ -1,15 +1,44 @@
 import React from 'react'
 
 import style from './style.css'
-import WithTiltBackgroundImage from "../../hoc/withTiltBackgroundImage/WithTiltBackgroundImage";
+import {services} from "../../constants";
+import {CustomButton} from "../../components";
 
 const Home = (props) => {
+    const knowThePrice = () => {
+
+    }
+    const signUp = () => {
+
+    }
     return (
-        <WithTiltBackgroundImage>
-            <div className={style.container}>
-                <p>HERE</p>
+        <div className={style.container}>
+            <p className={style.homeHeader}>
+                Эстетическая косметология Дарии Розлач
+            </p>
+            <div className={style.homeBody}>
+                <p className={style.bodyHeader}>
+                    Услуги:
+                </p>
+                {services.map(service => {
+                    return (
+                        <p className={style.service}>
+                            {service}
+                        </p>
+                    )
+                })}
             </div>
-        </WithTiltBackgroundImage>
+            <div className={style.footer}>
+                <CustomButton
+                    handleClick={signUp}
+                    buttonText='Записаться'
+                />
+                <CustomButton
+                    handleClick={knowThePrice}
+                    buttonText='Узнать цены'
+                />
+            </div>
+        </div>
     )
 }
 

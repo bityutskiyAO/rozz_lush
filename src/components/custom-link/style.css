@@ -1,0 +1,32 @@
+.customLink {
+    margin-right: 50px;
+    text-decoration: none;
+    transition: color 0.1s, border-bottom-color 0.1s;
+}
+.customLink:hover {
+    color: #9F65A6;
+    border-bottom: none;
+}
+.customLink:last-of-type {
+    margin-right: 0;
+}
+
+.whiteLink {
+    color: #fff;
+    border-bottom: 2px solid white;
+    transition: color 0.1s, border-bottom-color 0.1s;
+}
+.whiteLink:hover {
+    color: black;
+    border-bottom: none;
+}
+.blackLink {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.activeLink{
+    color: #9F65A6;
+    text-decoration: none;
+    border-bottom: none;
+}

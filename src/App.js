@@ -1,12 +1,11 @@
 import React from 'react';
-import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
+import {Redirect, Route, Switch} from 'react-router-dom'
 import {ContactsPage, HomePage, ServicesPage, WorkExamplesPage} from "./pages";
-
-import './App.css';
+import {Layout} from "./hoc";
 
 function App() {
     return (
-        <BrowserRouter>
+        <Layout>
             <Switch>
                 <Route
                     path="/work-examples"
@@ -29,7 +28,7 @@ function App() {
                     to="/"
                 />
             </Switch>
-        </BrowserRouter>
+        </Layout>
     );
 }
 

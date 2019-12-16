@@ -7,18 +7,21 @@
 }
 
 .trapeze {
-    background-color: red;
     position: absolute;
-    height: 100%;
-    z-index: 1;
-    width: 50%;
-    border-top: 500px;
-    border-right: 25px solid transparent;
+    z-index: -1;
+    max-width: 40%;
+    min-width: 40%;
+    border-top: 100vh solid white;
+    border-right: 250px solid transparent;
 }
 
 .imageBackground {
     position: absolute;
-    z-index: -1;
-    width: 50%;
-    height: 100%;
+    box-sizing: border-box;
+    right: 0;
+    z-index: -2;
+    min-width: 60%;
+    height: 100vh;
+    background: url('../../icons/mainBackground.png') no-repeat;
+    background-size: cover;
 }
