@@ -1,6 +1,7 @@
 import React from 'react'
 import CustomLink from "../custom-link/CustomLink";
 import {NavLink} from "react-router-dom";
+import classnames from 'classnames'
 import {withRouter} from "react-router";
 
 import style from './style.css'
@@ -25,9 +26,9 @@ const Header = (props) => {
     return (
         <div className={style.container}>
             <NavLink to='/'>
-                <button className={style.logoButton}/>
+                <button className={`${style.logoButton}`}/>
             </NavLink>
-            <div className={style.links}>
+            <div className={`animated fadeIn ${style.links} ${style.animatedLinks}`}>
                 {links.map((link) => {
                     return (
                         <CustomLink

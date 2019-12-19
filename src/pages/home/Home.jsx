@@ -1,8 +1,10 @@
 import React from 'react'
 
-import style from './style.css'
 import {services} from "../../constants";
 import {CustomButton} from "../../components";
+import classnames from 'classnames'
+
+import style from './style.css'
 
 const Home = (props) => {
     const knowThePrice = () => {
@@ -12,7 +14,7 @@ const Home = (props) => {
 
     }
     return (
-        <div className={style.container}>
+        <div className={classnames(style.container, style.animatedHome)}>
             <p className={style.homeHeader}>
                 Эстетическая косметология Дарии Розлач
             </p>

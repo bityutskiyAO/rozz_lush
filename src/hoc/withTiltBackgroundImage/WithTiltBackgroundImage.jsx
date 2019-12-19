@@ -1,14 +1,18 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 import style from './style.css'
 
 const WithTiltBackgroundImage = ({children}) => {
+    // useEffect(() => {
+    //     let imageBackground = document.getElementById('imageBackground')
+    //     imageBackground.addEventListener('animationstart', () => {
+    //         console.log('uuuuu')
+    //     }, false)
+    // }, [])
+
     return (
         <div className={style.container}>
-            <div className={style.trapeze}>
-
-            </div>
-            <div className={style.imageBackground}>
+            <div id='imageBackground' className={style.imageBackground}>
 
             </div>
             {children}

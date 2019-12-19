@@ -1,32 +1,85 @@
 .customLink {
     margin-right: 50px;
     text-decoration: none;
-    transition: color 0.1s, border-bottom-color 0.1s;
 }
-.customLink:hover {
-    color: #9F65A6;
-    border-bottom: none;
-}
+
 .customLink:last-of-type {
     margin-right: 0;
 }
 
 .whiteLink {
     color: #fff;
-    border-bottom: 2px solid white;
-    transition: color 0.1s, border-bottom-color 0.1s;
-}
-.whiteLink:hover {
-    color: black;
-    border-bottom: none;
 }
 .blackLink {
     color: #000;
-    border-bottom: 2px solid #000;
+
+}
+.activeLink {
+    color: #9F65A6;
 }
 
-.activeLink{
-    color: #9F65A6;
-    text-decoration: none;
-    border-bottom: none;
+.activeLink,
+.blackLink,
+.whiteLink {
+    position: relative;
+    opacity: 0.85;
+    transition: all 0.4s;
 }
+.whiteLink:hover,
+.blackLink:hover,
+.activeLink:hover{
+    opacity: 1;
+}
+.whiteLink::before {
+    background-color: white;
+}
+.blackLink::before {
+    background-color: #000;
+}
+.activeLink::before {
+    background-color: #9F65A6;
+}
+.whiteLink::before,
+.blackLink::before,
+.activeLink::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    animation: underline 1s;
+    animation-fill-mode: forwards;
+}
+
+.whiteLink:hover::before,
+.blackLink:hover::before,
+.activeLink:hover::before {
+    left: 50%;
+    width: 0;
+    animation: underline-delete 0.5s;
+}
+
+@keyframes underline {
+    0%{
+        left: 50%;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes underline-delete {
+    0%{
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: 50%;
+        width: 0;
+    }
+}
+
+
+

@@ -6,15 +6,6 @@
     width: 100%;
 }
 
-.trapeze {
-    position: absolute;
-    z-index: -1;
-    max-width: 40%;
-    min-width: 40%;
-    border-top: 100vh solid white;
-    border-right: 250px solid transparent;
-}
-
 .imageBackground {
     position: absolute;
     box-sizing: border-box;
@@ -24,4 +15,39 @@
     height: 100vh;
     background: url('../../icons/mainBackground.png') no-repeat;
     background-size: cover;
+    animation: slide-left 1s;
 }
+
+.imageBackground::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 100vh solid white;
+    border-right: 280px solid transparent;
+}
+
+
+@-webkit-keyframes slide-left{
+    0% {
+        -webkit-transform:translateX(0);
+        transform:translateX(0)
+    }
+    100%{
+        -webkit-transform:translateX(-100px);
+        transform:translateX(-100px)
+    }
+}
+@keyframes slide-left{
+    0%{
+        -webkit-transform:translateX(700px);
+        transform:translateX(700px)
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform:translateX(0)
+    }
+}
+

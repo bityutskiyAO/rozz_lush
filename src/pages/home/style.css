@@ -34,3 +34,17 @@
     max-width: 210px;
     flex-direction: column;
 }
+
+.animatedHome {
+    animation: slide-in 1s;
+}
+@keyframes slide-in {
+    0% {
+        -webkit-transform:translateX(700px);
+        transform: translateX(-700px);
+    }
+    100% {
+        -webkit-transform:translateX(0);
+        transform: translateX(0);
+    }
+}
