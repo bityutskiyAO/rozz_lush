@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/rozz_lush/static/css/main.5c1c1fbe.chunk.css",
+    "main.js": "/rozz_lush/static/js/main.df8a30f1.chunk.js",
+    "main.js.map": "/rozz_lush/static/js/main.df8a30f1.chunk.js.map",
+    "runtime-main.js": "/rozz_lush/static/js/runtime-main.d0df6ace.js",
+    "runtime-main.js.map": "/rozz_lush/static/js/runtime-main.d0df6ace.js.map",
+    "static/js/2.c01ebf1f.chunk.js": "/rozz_lush/static/js/2.c01ebf1f.chunk.js",
+    "static/js/2.c01ebf1f.chunk.js.map": "/rozz_lush/static/js/2.c01ebf1f.chunk.js.map",
+    "index.html": "/rozz_lush/index.html",
+    "precache-manifest.7f7cb1807653739231e64cf715ad734b.js": "/rozz_lush/precache-manifest.7f7cb1807653739231e64cf715ad734b.js",
+    "service-worker.js": "/rozz_lush/service-worker.js",
+    "static/css/main.5c1c1fbe.chunk.css.map": "/rozz_lush/static/css/main.5c1c1fbe.chunk.css.map",
+    "static/js/2.c01ebf1f.chunk.js.LICENSE": "/rozz_lush/static/js/2.c01ebf1f.chunk.js.LICENSE",
+    "static/media/style.css": "/rozz_lush/static/media/whatsup.f41548a6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0df6ace.js",
+    "static/js/2.c01ebf1f.chunk.js",
+    "static/css/main.5c1c1fbe.chunk.css",
+    "static/js/main.df8a30f1.chunk.js"
+  ]
+}
