@@ -30,7 +30,8 @@
     /*background: url('../../icons/logoBlack.svg') no-repeat;*/
 }
 
-.animatedLinks {
+.animated {
     animation-delay: 0.5s;
     animation-duration: 1s;
 }
+

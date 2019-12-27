@@ -26,9 +26,9 @@ const Header = (props) => {
     return (
         <div className={style.container}>
             <NavLink to='/'>
-                <button className={`${style.logoButton}`}/>
+                <button className={`animated fadeIn ${style.logoButton} ${style.animated}`}/>
             </NavLink>
-            <div className={`animated fadeIn ${style.links} ${style.animatedLinks}`}>
+            <div className={`animated fadeIn ${style.links} ${style.animated}`}>
                 {links.map((link) => {
                     return (
                         <CustomLink

@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+
+.contentBlock {
+    max-width: 500px;
+    animation-duration: 1s;
+}
+.contactsHeader {
+    font-family: Montserrat-Bold, sans-serif;
+    font-style: normal;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.smsExample {
+    font-size: 23px;
+}
+.separator {
+    font-family: Montserrat-Bold, sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+}
+.footer {
+    position: absolute;
+    bottom: 0
+}
+
+.footerText {
+    font-size: 18px;
+}

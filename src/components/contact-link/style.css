@@ -1,0 +1,32 @@
+.contactLinkContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.link {
+    font-family: Montserrat-Bold, sans-serif;
+    color: #9F65A6;
+    font-size: 25px;
+    font-weight: 800;
+    margin-right: 15px;
+}
+.additionalText {
+    font-size: 25px;
+}
+.icon {
+    min-width: 90px;
+    min-height: 90px;
+    margin-right: 20px;
+}
+.icon-dikidi {
+    background-image: url('../../icons/dikidi.svg');
+    background-size: cover;
+}
+.icon-whatsup {
+    background-image: url('../../icons/whatsup.svg');
+    background-size: cover;
+}
+.icon-instagram {
+    background-image: url('../../icons/insta.svg');
+    background-size: cover;
+}
