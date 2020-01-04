@@ -1,0 +1,52 @@
+.active {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.hidden {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+.hidden::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.serviceImageActive {
+    width: 600px;
+    height: 600px;
+}
+.serviceImageHidden {
+    width: 500px;
+    height: 500px;
+}
+
+.serviceInfo {
+    position: absolute;
+    top: 0 ;left: 0; bottom: 0; right: 0;
+    margin: 20px  auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #9F65A6;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    height: 70px;
+    width: 210px;
+}
+.serviceInfo p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+

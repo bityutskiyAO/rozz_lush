@@ -1,0 +1,71 @@
+
+.flipContainer {
+    perspective: 1000px;
+}
+.flipContainer:hover .flipper{
+    transform: rotateY(180deg);
+}
+.flipContainer,
+.front,
+.back {
+    width: 240px;
+    height: 240px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.flipper {
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.front {
+    z-index: 2;
+    border-radius: 3px;
+}
+.back {
+    transform: rotateY(180deg);
+    text-align: center;
+    border-radius: 3px;
+    border: 2px solid #9F65A6;;
+    padding: 10px;
+    box-sizing: border-box;
+    color: black;
+}
+.back .workDescriptionsTitle {
+    margin: 0 0 10px 0;
+}
+.back .workDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.back .workDescription .detailInfo {
+    margin-top: 5px;
+    font-size: 13px;
+}
+.back .workDescription .detailInfo:first-of-type {
+    margin-top: 0;
+}
+
+.back .heart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.back .heart img {
+    width: 33px;
+    height: 33px;
+}
+
+
+

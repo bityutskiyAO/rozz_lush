@@ -5,6 +5,7 @@
     font-weight: bold;
     font-size: 18px;
     color: white;
+    outline: none;
     background-color: #9F65A6;
     transition: background-color 0.2s ease-in, color 0.2s ease-in;
 }

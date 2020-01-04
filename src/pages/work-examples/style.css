@@ -1,0 +1,38 @@
+.container {
+    margin-top: 50px;
+}
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 10px;
+    animation: opacity 2s;
+}
+.main {
+    margin: auto;
+    position: absolute;
+    top: 80px; left: 0; bottom: 0; right: 0;
+    height: 240px;
+    min-width: 400px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    text-align: center;
+    background-color: white;
+}
+
+.mainText {
+    font-size: 30px;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

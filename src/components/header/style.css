@@ -21,17 +21,19 @@
     border: none;
     box-shadow: none;
     transition: background 0.5ms ease-in;
-    animation-delay: 1.1s;
-    animation-duration: 1.5s;
+    /*animation-delay: 0.5s;*/
+    animation-duration: 2s;
 }
 
+.blackLogoButton {
+    background: url('../../icons/logoBlack.svg') no-repeat;
+}
 .logoButton:hover{
     cursor: pointer;
-    /*background: url('../../icons/logoBlack.svg') no-repeat;*/
 }
 
 .animated {
-    animation-delay: 0.5s;
-    animation-duration: 1s;
+    /*animation-delay: 0.5s;*/
+    animation-duration: 2s;
 }
 

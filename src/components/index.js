@@ -1,3 +1,5 @@
 export {default as Header} from './header/Header'
 export {default as CustomButton} from './custom-button/CustomButton'
 export {default as ContactLink} from './contact-link/ContactLink'
+export {default as WorkImage} from './work-image/WorkImage'
+export {default as ServiceBlock} from './service-block/ServiceBlock'

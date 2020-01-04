@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:-60px;
+    margin-right:-60px;
+    overflow: hidden;
+}
+
+.sliderBlock {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftHiddenService {
+    transform: translateX(-80px);
+}
+
+.rightHiddenService {
+    transform: translateX(80px);
+}
+
+.frontArrow {
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    margin: auto 0;
+    right: 20px;
+    top: 50vh;
+}
+.backArrow {
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    margin: auto 0;
+    left: 20px;
+    top: 50vh;
+}
+
+.navigationPanel {
+    margin: 50px 0;
+    font-size: 32px;
+}
