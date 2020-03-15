@@ -1,7 +1,7 @@
 .active {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
 }
 
 .hidden {
@@ -22,8 +22,8 @@
 }
 
 .serviceImageActive {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
 }
 .serviceImageHidden {
     width: 500px;
@@ -50,3 +50,53 @@
     color: white;
 }
 
+.leftAnimation {
+    animation: leftFront 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.activeAnimation {
+    animation: activeFront 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.rightAnimation {
+    animation: rightFront 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes activeFront {
+    0%{
+        transform: translateX(564px);
+    }
+    100% {
+        transform: translateX(0);
+        transform: scale(1.2);
+    }
+}
+
+@keyframes leftFront {
+    0%{
+        transform: translateX(564px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightFront {
+    0%{
+        transform: translateX(-1160px);
+    }
+    50% {
+        transform: translateX(-1692px);
+    }
+    51% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(532px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

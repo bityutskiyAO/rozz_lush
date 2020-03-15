@@ -22,7 +22,9 @@ const Layout = (props) => {
                     <Header
                         theme="blackLink"
                     />
-                    {children}
+                    <div className={style.childrenContainer}>
+                        {children}
+                    </div>
                 </div>
             }
         </React.Fragment>
