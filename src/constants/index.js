@@ -268,7 +268,7 @@ export const examples = [
 ]
 ///////////////////////////////////////////////////////////////////////////////---Услуги--//////////////////////////////////////////////////////////////////////
 export const providedServices = [
-    {
+    [{
         src: 'work1',
         type: 'Наращивание ресниц',
         serviceDetails: {
@@ -315,53 +315,149 @@ export const providedServices = [
                 },
             ]
         }
+    }],
+    [{
+        src: 'work4',
+        type: 'Наращивание ресниц',
+        serviceDetails: {
+            details: [
+                {
+                    key: 'Объем',
+                    value: '4D'
+                },
+                {
+                    key: 'Стоимость',
+                    value: '10900₽'
+                },
+            ]
+        }
     },
-    // {
-    //     src: 'work4',
-    //     type: 'Наращивание ресниц',
-    //     serviceDetails: {
-    //         details: [
-    //             {
-    //                 key: 'Объем',
-    //                 value: '4D'
-    //             },
-    //             {
-    //                 key: 'Стоимость',
-    //                 value: '10900₽'
-    //             },
-    //         ]
-    //     }
-    // },
-    // {
-    //     src: 'work5',
-    //     type: 'Наращивание ресниц',
-    //     serviceDetails: {
-    //         details: [
-    //             {
-    //                 key: 'Объем',
-    //                 value: '0D'
-    //             },
-    //             {
-    //                 key: 'Стоимость',
-    //                 value: '1000₽'
-    //             },
-    //         ]
-    //     }
-    // },
-    // {
-    //     src: 'work6',
-    //     type: 'Наращивание ресниц',
-    //     serviceDetails: {
-    //         details: [
-    //             {
-    //                 key: 'Объем',
-    //                 value: '3D'
-    //             },
-    //             {
-    //                 key: 'Стоимость',
-    //                 value: '2900₽'
-    //             },
-    //         ]
-    //     }
-    // },
+    {
+        src: 'work5',
+        type: 'Наращивание ресниц',
+        serviceDetails: {
+            details: [
+                {
+                    key: 'Объем',
+                    value: '0D'
+                },
+                {
+                    key: 'Стоимость',
+                    value: '1000₽'
+                },
+            ]
+        }
+    },
+    {
+        src: 'work6',
+        type: 'Наращивание ресниц',
+        serviceDetails: {
+            details: [
+                {
+                    key: 'Объем',
+                    value: '3D'
+                },
+                {
+                    key: 'Стоимость',
+                    value: '2900₽'
+                },
+            ]
+        }
+    }],
+    [{
+        src: 'work7',
+        type: 'Наращивание ресниц',
+        serviceDetails: {
+            details: [
+                {
+                    key: 'Объем',
+                    value: '2D'
+                },
+                {
+                    key: 'Стоимость',
+                    value: '1900₽'
+                },
+            ]
+        }
+    },
+        {
+            src: 'work8',
+            type: 'Наращивание ресниц',
+            serviceDetails: {
+                details: [
+                    {
+                        key: 'Объем',
+                        value: '3D'
+                    },
+                    {
+                        key: 'Стоимость',
+                        value: '3200₽'
+                    },
+                ]
+            }
+        },
+        {
+            src: 'work9',
+            type: 'Наращивание ресниц',
+            serviceDetails: {
+                details: [
+                    {
+                        key: 'Объем',
+                        value: '1.5D'
+                    },
+                    {
+                        key: 'Стоимость',
+                        value: '1500₽'
+                    },
+                ]
+            }
+        }],
+    [{
+        src: 'work10',
+        type: 'Наращивание ресниц',
+        serviceDetails: {
+            details: [
+                {
+                    key: 'Объем',
+                    value: '2D'
+                },
+                {
+                    key: 'Стоимость',
+                    value: '1900₽'
+                },
+            ]
+        }
+    },
+        {
+            src: 'work12',
+            type: 'Наращивание ресниц',
+            serviceDetails: {
+                details: [
+                    {
+                        key: 'Объем',
+                        value: '3D'
+                    },
+                    {
+                        key: 'Стоимость',
+                        value: '3200₽'
+                    },
+                ]
+            }
+        },
+        {
+            src: 'work13',
+            type: 'Наращивание ресниц',
+            serviceDetails: {
+                details: [
+                    {
+                        key: 'Объем',
+                        value: '1.5D'
+                    },
+                    {
+                        key: 'Стоимость',
+                        value: '1500₽'
+                    },
+                ]
+            }
+        }],
 ]

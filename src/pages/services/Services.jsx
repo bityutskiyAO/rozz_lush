@@ -25,163 +25,120 @@ const navigations = [
     },
 ]
 
-const Services = (props) => {
-    const [serviceArray, setServiceArray] = useState(providedServices)
-    const [hiddenLeftService, setHiddenLeftService] = useState(serviceArray[0] ?
-                                                            { service: serviceArray[0], id: 0, classname: '' } : null)
-    const [activeService, setActiveService] = useState(serviceArray[1] ?
-                                                            { service: serviceArray[1], id: 1, classname: '' } : { service: serviceArray[0], id: 0, classname: '' })
-    const [hiddenRightService, setHiddenRightService] = useState(serviceArray[2] ?
-                                                            { service: serviceArray[2], id: 2, classname: '' } : serviceArray.length > 1 ?
-                                                            { service: serviceArray[0], id: 1, classname: '' } : null)
+class Services extends React.Component{
 
-    const handleBackClick = () => {
-        const serviceLength = serviceArray.length
-        if(serviceLength > 1) {
-            if (hiddenLeftService.id === 0) {
-                setHiddenRightService({
-                    service: activeService.service,
-                    id: activeService.id
-                })
-                setActiveService({
-                    service: hiddenLeftService.service,
-                    id: hiddenLeftService.id
-                })
-                setHiddenLeftService({
-                    service: serviceArray[serviceLength - 1],
-                    id: serviceLength - 1
-                })
-            } else {
-                setHiddenRightService({
-                    service: activeService.service,
-                    id: activeService.id
-                })
-                setActiveService({
-                    service: hiddenLeftService.service,
-                    id: hiddenLeftService.id
-                })
-                setHiddenLeftService({
-                    service: serviceArray[hiddenLeftService.id - 1],
-                    id: hiddenLeftService.id - 1
-                })
-            }
+    constructor(props) {
+        super(props);
+        this.state = {
+            direction: -1
         }
     }
 
-    const addAnimation = (id, animationName, callback) => {
-        const element = document.getElementById(id)
-        element.classList.add(style[animationName])
-        element.addEventListener('animationend', () => {
-            element.classList.remove(style[animationName])
-            element.removeEventListener('animationend', () => {})
-        })
-
-    }
-
-    const handleFrontClick = () => {
-        const serviceLength = serviceArray.length
-        if(serviceLength > 1) {
-            if (hiddenRightService.id === serviceLength - 1) {
-                setHiddenLeftService({
-                    service: activeService.service,
-                    id: activeService.id,
-                    classname: 'leftAnimation'
-                })
-                setActiveService({
-                    service: hiddenRightService.service,
-                    id: hiddenRightService.id,
-                    classname: 'activeAnimation'
-                })
-                setHiddenRightService({
-                    service: serviceArray[0],
-                    id: 0,
-                    classname: 'rightAnimation'
-                })
+    componentDidMount() {
+        const slider = document.getElementById('slider');
+        slider.addEventListener('transitionend', () => {
+            if (this.state.direction === 1) {
+                slider.prepend(slider.lastElementChild);
             } else {
-                setHiddenLeftService({
-                    service: activeService.service,
-                    id: activeService.id,
-                    classname: 'leftAnimation'
-                })
-                setActiveService({
-                    service: hiddenRightService.service,
-                    id: hiddenRightService.id,
-                    classname: 'activeAnimation'
-                })
-                setHiddenRightService({
-                    service: serviceArray[hiddenRightService.id + 1],
-                    id: hiddenRightService.id + 1,
-                    classname: 'rightAnimation'
-                })
+                slider.appendChild(slider.firstElementChild);
             }
-        }
+            slider.style.transition = 'none';
+            slider.style.transform = 'translate(0)';
+            setTimeout(() => {
+                slider.style.transition = 'all 2s';
+            })
+        }, false)
     }
 
+    render() {
 
-    return (
-        <div className={style.container}>
-            <div className={style.navigationPanel}>
-                {navigations.map(navigation => {
-                    return (
-                        <CustomLink
-                            key={navigation.name}
-                            to={navigation.to}
-                            name={navigation.name}
-                            exact={true}
-                            type="blackLink"
-                        />
-                    )
-                })}
-            </div>
-            <div className={style.mainContent}>
-                <div className={style.backArrow}>
-                    <img
-                        src={backArrow}
-                        className={style.arrow}
-                        alt="back arrow"
-                        onClick={handleBackClick}
-                    />
-                </div>
-                <div className={style.sliderBlock} id="sliderBlock">
-                    <div className={style.sliderElement}>
-                        { hiddenLeftService &&
-                        <ServiceBlock
-                            {...hiddenLeftService.service}
-                            active={false}
-                            classname={hiddenLeftService.classname}
-                        />
-                        }
-                    </div>
-                    <div className={style.sliderElement}>
-                        <ServiceBlock
-                            {...activeService.service}
-                            active
-                            classname={activeService.classname}
+        const handleNextClick = () => {
+            const carousel = document.getElementById('carousel');
+            const slider = document.getElementById('slider');
+            if (this.state.direction === 1) {
+                this.setState({
+                    direction: -1
+                })
+                slider.prepend(slider.lastElementChild);
+            }
+            carousel.style.justifyContent = 'flex-start';
+            slider.style.transform = 'translate(-25%)';
+        }
 
-                        />
-                    </div>
-                    <div className={style.sliderElement}>
-                        {hiddenRightService &&
-                        <ServiceBlock
-                            {...hiddenRightService.service}
-                            active={false}
-                            classname={hiddenRightService.classname}
-                        />
-                        }
-                    </div>
+        const handlePrevClick = () => {
+            const carousel = document.getElementById('carousel');
+            const slider = document.getElementById('slider');
+            if (this.state.direction === -1) {
+                this.setState({
+                    direction: 1
+                })
+                slider.appendChild(slider.firstElementChild);
+            }
+            carousel.style.justifyContent = 'flex-end';
+            slider.style.transform = 'translate(25%)';
+        }
+
+        return (
+            <div className={style.container}>
+                <div className={style.navigationPanel}>
+                    {navigations.map(navigation => {
+                        return (
+                            <CustomLink
+                                key={navigation.name}
+                                to={navigation.to}
+                                name={navigation.name}
+                                exact={true}
+                                type="blackLink"
+                            />
+                        )
+                    })}
                 </div>
-                <div className={style.frontArrow}>
-                    <img
-                        src={frontArrow}
-                        className={style.arrow}
-                        height="150px"
-                        alt="front arrow"
-                        onClick={handleFrontClick}
-                    />
+                <div className={style.carouselBlock}>
+                    <div className={style.prev}>
+                        <img
+                            src={backArrow}
+                            className={style.arrow}
+                            alt="back arrow"
+                            onClick={handlePrevClick}
+                        />
+                    </div>
+                    <div className={style.carousel} id="carousel">
+                        <div className={style.slider} id="slider">
+                            {providedServices.map((service) => {
+                                return (
+                                    <div className={style.sliderBlock} id="sliderBlock">
+                                        <div className={style.serviceElement}>
+                                            <ServiceBlock
+                                                {...service[0]}
+                                            />
+                                        </div>
+                                        <div className={style.serviceElement}>
+                                            <ServiceBlock
+                                                {...service[1]}
+                                            />
+                                        </div>
+                                        <div className={style.serviceElement}>
+                                            <ServiceBlock
+                                                {...service[2]}
+                                            />
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                    <div className={style.next}>
+                        <img
+                            src={frontArrow}
+                            className={style.arrow}
+                            alt="front arrow"
+                            onClick={handleNextClick}
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Services

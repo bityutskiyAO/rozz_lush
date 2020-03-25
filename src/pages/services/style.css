@@ -5,41 +5,70 @@
     align-items: center;
     margin-left:-60px;
     margin-right:-60px;
-    overflow: hidden;
-}
-.mainContent {
-    display: flex;
-    min-height: 600px;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-}
-.sliderBlock {
-    position: relative;
-    display: flex;
-    min-height: 600px;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
 }
 
-.sliderElement {
-    margin: 0 32px;
-}
-
-.frontArrow {
-    cursor: pointer;
-    margin-right: 32px;
-}
-.backArrow {
-    cursor: pointer;
-    margin-left: 32px;
-}
-.arrow {
-    color: #9F65A6;
-    height: 150px;
-}
 .navigationPanel {
     margin: 50px 0;
     font-size: 32px;
+}
+
+/*CAROUSEL STYLES*/
+.carousel {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+}
+.slider {
+    display: flex;
+    height: 100%;
+    width: 400%;
+    flex-shrink: 0;
+    transition: all 2s;
+}
+
+.carouselBlock {
+    display: flex;
+    min-height: 500px;
+    align-items: center;
+    width: 100vw;
+}
+/*---------------------*/
+
+.next {
+    height: 150px;
+    margin-right: 32px;
+    cursor: pointer;
+}
+.prev {
+    height: 150px;
+    margin-left: 32px;
+    cursor: pointer;
+}
+
+.sliderBlock {
+    flex-basis: 25%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+}
+
+.serviceElement {
+    margin: 0 32px;
+}
+
+.serviceElement:first-of-type,
+.serviceElement:last-of-type {
+    margin: 0;
+}
+
+.arrow {
+    color: #9F65A6;
+    height: 150px;
 }

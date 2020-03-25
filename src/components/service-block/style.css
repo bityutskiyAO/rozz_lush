@@ -1,33 +1,11 @@
-.active {
+.serviceElement {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: calc(100vh/2.1);
+    height: calc(100vh/2.1);
 }
 
-.hidden {
-    position: relative;
-    width: 500px;
-    height: 500px;
-}
-.hidden::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: black;
-    opacity: 0.5;
-    z-index: 1;
-}
-
-.serviceImageActive {
-    width: 500px;
-    height: 500px;
-}
-.serviceImageHidden {
-    width: 500px;
-    height: 500px;
+.serviceImage {
+    width: 100%;
 }
 
 .serviceInfo {
@@ -38,65 +16,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
     background-color: #9F65A6;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     height: 70px;
-    width: 210px;
+    width: calc(100vh/5);
 }
 .serviceInfo p {
     margin: 0;
     font-size: 14px;
     color: white;
-}
-
-.leftAnimation {
-    animation: leftFront 1.2s;
-    animation-fill-mode: forwards;
-}
-
-.activeAnimation {
-    animation: activeFront 1.2s;
-    animation-fill-mode: forwards;
-}
-
-.rightAnimation {
-    animation: rightFront 1.2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes activeFront {
-    0%{
-        transform: translateX(564px);
-    }
-    100% {
-        transform: translateX(0);
-        transform: scale(1.2);
-    }
-}
-
-@keyframes leftFront {
-    0%{
-        transform: translateX(564px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes rightFront {
-    0%{
-        transform: translateX(-1160px);
-    }
-    50% {
-        transform: translateX(-1692px);
-    }
-    51% {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(532px);
-    }
-    100% {
-        transform: translateX(0);
-    }
 }
