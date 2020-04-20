@@ -34,6 +34,16 @@
     min-height: 500px;
     align-items: center;
     width: 100vw;
+    animation: loadCarousel 1s forwards;
+}
+
+@keyframes loadCarousel {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 /*---------------------*/
 
@@ -72,3 +82,17 @@
     color: #9F65A6;
     height: 150px;
 }
+
+.backgroundImage {
+    position: absolute;
+    box-sizing: border-box;
+    left: 10%;
+    top:0;
+    z-index: -2;
+    width: 100vh;
+    height: 100vh;
+    background: url('../../icons/rozz-icon-empty.svg') no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+}
+

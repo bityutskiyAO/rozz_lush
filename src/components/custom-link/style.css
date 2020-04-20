@@ -1,6 +1,7 @@
 .customLink {
     margin-right: 50px;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .customLink:last-of-type {

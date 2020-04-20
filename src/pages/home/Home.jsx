@@ -14,33 +14,36 @@ const Home = (props) => {
 
     }
     return (
-        <div className={classnames(style.container, style.animatedHome)}>
-            <p className={style.homeHeader}>
-                Эстетическая косметология Дарии Розлач
-            </p>
-            <div className={style.homeBody}>
-                <p className={style.bodyHeader}>
-                    Услуги:
+        <React.Fragment>
+            <div className={style.backgroundImage}/>
+            <div className={classnames(style.container, style.animatedHome)}>
+                <p className={style.homeHeader}>
+                    Эстетическая косметология Дарии Розлач
                 </p>
-                {services.map(service => {
-                    return (
-                        <p className={style.service}>
-                            {service}
-                        </p>
-                    )
-                })}
+                <div className={style.homeBody}>
+                    <p className={style.bodyHeader}>
+                        Услуги:
+                    </p>
+                    {services.map(service => {
+                        return (
+                            <p className={style.service}>
+                                {service}
+                            </p>
+                        )
+                    })}
+                </div>
+                <div className={style.footer}>
+                    <CustomButton
+                        handleClick={signUp}
+                        buttonText='Записаться'
+                    />
+                    <CustomButton
+                        handleClick={knowThePrice}
+                        buttonText='Узнать цены'
+                    />
+                </div>
             </div>
-            <div className={style.footer}>
-                <CustomButton
-                    handleClick={signUp}
-                    buttonText='Записаться'
-                />
-                <CustomButton
-                    handleClick={knowThePrice}
-                    buttonText='Узнать цены'
-                />
-            </div>
-        </div>
+        </React.Fragment>
     )
 }
 

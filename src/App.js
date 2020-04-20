@@ -16,11 +16,15 @@ function App() {
                     component={ServicesPage}
                 />
                 <Route
+                    path="/services/:id"
+                    component={ServicesPage}
+                />
+                <Route
                     path="/contacts"
                     component={ContactsPage}
                 />
                 <Route
-                    exact={true}
+                    exact
                     path="/"
                     component={HomePage}
                 />

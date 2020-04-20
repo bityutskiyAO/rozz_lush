@@ -30,6 +30,7 @@ const contacts = [
 const Contacts = (props) => {
     return (
         <React.Fragment>
+            <div className={style.backgroundImage}/>
             <div className={style.container}>
                 <div className={`${style.contentBlock} animated slideInLeft`}>
                     <p className={style.contactsHeader}>

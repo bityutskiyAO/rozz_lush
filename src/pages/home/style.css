@@ -2,6 +2,19 @@
 
 }
 
+.backgroundImage {
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top:0;
+    z-index: -2;
+    width: 100vh;
+    height: 100vh;
+    background: url('../../icons/rozz-icon-empty.svg') no-repeat 60% 50%;
+    background-size: cover;
+    opacity: 0.1;
+}
+
 .homeHeader {
     font-size: 40px;
     font-weight: 500;

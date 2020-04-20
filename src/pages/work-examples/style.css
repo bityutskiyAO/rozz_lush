@@ -1,20 +1,23 @@
 .container {
-    margin-top: 50px;
+    margin-top: 100px;
+    height: 100%;
+    width: 1580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .images {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    margin-left: 10px;
+    justify-content: center;
     animation: opacity 2s;
 }
 .main {
     margin: auto;
     position: absolute;
-    top: 80px; left: 0; bottom: 0; right: 0;
+    top: 120px; left: 0; bottom: 0; right: 0;
     height: 240px;
-    min-width: 400px;
-    max-width: 500px;
+    width: 520px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,6 +25,7 @@
     z-index: 10;
     text-align: center;
     background-color: white;
+    overflow: hidden;
 }
 
 .mainText {
@@ -35,4 +39,17 @@
     100% {
         opacity: 1;
     }
+}
+
+.backgroundImage {
+    position: absolute;
+    box-sizing: border-box;
+    left: 20%;
+    top:0;
+    z-index: -2;
+    width: 100vh;
+    height: 100vh;
+    background: url('../../icons/rozz-icon-empty.svg') no-repeat;
+    background-size: cover;
+    opacity: 0.1;
 }

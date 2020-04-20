@@ -13,6 +13,11 @@
     margin-right: 20px;
     margin-bottom: 20px;
 }
+.flipContainer:nth-child(6n),
+.front:nth-child(6n),
+.back:nth-child(6n) {
+    margin-right: 0;
+}
 .flipper {
     transition: 0.8s;
     transform-style: preserve-3d;
@@ -32,7 +37,7 @@
     transform: rotateY(180deg);
     text-align: center;
     border-radius: 3px;
-    border: 2px solid #9F65A6;;
+    border: 2px solid #9F65A6;
     padding: 10px;
     box-sizing: border-box;
     color: black;
